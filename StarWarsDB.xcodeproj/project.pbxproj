@@ -19,6 +19,7 @@
 		81E278FC22FF5B8200E71FB5 /* HTTPURLResponseAPIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E278FB22FF5B8200E71FB5 /* HTTPURLResponseAPIError.swift */; };
 		81E278FE22FF9E1A00E71FB5 /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E278FD22FF9E1A00E71FB5 /* NetworkClient.swift */; };
 		81E2790022FF9ECF00E71FB5 /* StarWarsEndpointBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E278FF22FF9ECF00E71FB5 /* StarWarsEndpointBuilder.swift */; };
+		81E2790422FFC21600E71FB5 /* ExpandableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E2790322FFC21600E71FB5 /* ExpandableCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		81E278FB22FF5B8200E71FB5 /* HTTPURLResponseAPIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPURLResponseAPIError.swift; sourceTree = "<group>"; };
 		81E278FD22FF9E1A00E71FB5 /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
 		81E278FF22FF9ECF00E71FB5 /* StarWarsEndpointBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarWarsEndpointBuilder.swift; sourceTree = "<group>"; };
+		81E2790322FFC21600E71FB5 /* ExpandableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,7 @@
 			children = (
 				81BAE53E22FF128500B16C50 /* AppDelegate.swift */,
 				81BAE54022FF128500B16C50 /* ViewController.swift */,
+				81E2790122FFBED400E71FB5 /* Components */,
 				81BAE56222FF193200B16C50 /* API Models */,
 				81E278F622FF5AB200E71FB5 /* Networking */,
 				81BAE54222FF128500B16C50 /* Main.storyboard */,
@@ -99,6 +102,22 @@
 				81E278FB22FF5B8200E71FB5 /* HTTPURLResponseAPIError.swift */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		81E2790122FFBED400E71FB5 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				81E2790222FFBFF400E71FB5 /* Expandable Cell */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		81E2790222FFBFF400E71FB5 /* Expandable Cell */ = {
+			isa = PBXGroup;
+			children = (
+				81E2790322FFC21600E71FB5 /* ExpandableCell.swift */,
+			);
+			path = "Expandable Cell";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -182,6 +201,7 @@
 				81BAE56422FF195B00B16C50 /* StarWarsPeopleModel.swift in Sources */,
 				81BAE53F22FF128500B16C50 /* AppDelegate.swift in Sources */,
 				81E278FE22FF9E1A00E71FB5 /* NetworkClient.swift in Sources */,
+				81E2790422FFC21600E71FB5 /* ExpandableCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
