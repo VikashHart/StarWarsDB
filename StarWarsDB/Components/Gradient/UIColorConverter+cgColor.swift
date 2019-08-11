@@ -49,6 +49,7 @@ extension UIColor {
     static let spring    = UIColor(hexString: "0fd850")!
     static let kindaGreen = UIColor(hexString: "50cc7f")!
     // Yellow
+    static let starWars = UIColor(hexString: "F0E123")!
     static let gold      = UIColor(hexString: "D4AF37")!
     static let lemon     = UIColor(hexString: "f9f047")!
     static let marigold  = UIColor(hexString: "F6AE2D")!

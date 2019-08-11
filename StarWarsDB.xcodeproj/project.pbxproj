@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		815EF85C22FFEF04001ADBCE /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815EF85B22FFEF04001ADBCE /* GradientView.swift */; };
 		815EF85E22FFEFA2001ADBCE /* UIColorConverter+cgColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815EF85D22FFEFA2001ADBCE /* UIColorConverter+cgColor.swift */; };
+		815EF8602300727D001ADBCE /* PeopleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815EF85F2300727D001ADBCE /* PeopleView.swift */; };
 		81BAE53F22FF128500B16C50 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BAE53E22FF128500B16C50 /* AppDelegate.swift */; };
 		81BAE54122FF128500B16C50 /* PeopleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BAE54022FF128500B16C50 /* PeopleViewController.swift */; };
 		81BAE54422FF128500B16C50 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81BAE54222FF128500B16C50 /* Main.storyboard */; };
@@ -28,6 +29,7 @@
 /* Begin PBXFileReference section */
 		815EF85B22FFEF04001ADBCE /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		815EF85D22FFEFA2001ADBCE /* UIColorConverter+cgColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColorConverter+cgColor.swift"; sourceTree = "<group>"; };
+		815EF85F2300727D001ADBCE /* PeopleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleView.swift; sourceTree = "<group>"; };
 		81BAE53B22FF128500B16C50 /* StarWarsDB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StarWarsDB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81BAE53E22FF128500B16C50 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		81BAE54022FF128500B16C50 /* PeopleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleViewController.swift; sourceTree = "<group>"; };
@@ -158,6 +160,7 @@
 		81E2790722FFEBBF00E71FB5 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				815EF85F2300727D001ADBCE /* PeopleView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -258,6 +261,7 @@
 				815EF85E22FFEFA2001ADBCE /* UIColorConverter+cgColor.swift in Sources */,
 				81E2790022FF9ECF00E71FB5 /* StarWarsEndpointBuilder.swift in Sources */,
 				81BAE56422FF195B00B16C50 /* StarWarsPeopleModel.swift in Sources */,
+				815EF8602300727D001ADBCE /* PeopleView.swift in Sources */,
 				81E2790B22FFECB100E71FB5 /* PersonCell.swift in Sources */,
 				81BAE53F22FF128500B16C50 /* AppDelegate.swift in Sources */,
 				81E278FE22FF9E1A00E71FB5 /* NetworkClient.swift in Sources */,
