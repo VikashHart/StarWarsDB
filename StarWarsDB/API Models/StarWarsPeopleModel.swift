@@ -1,6 +1,8 @@
 import Foundation
 
 struct StarWarsPeopleModel: Codable {
+    let count: String
+    let next: String?
     let results: [PersonData]
 }
 
