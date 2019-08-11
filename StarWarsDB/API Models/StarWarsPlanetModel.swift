@@ -1,6 +1,8 @@
 import Foundation
 
 struct StarWarsPlanetModel: Codable {
+    let count: String
+    let next: String?
     let results: [PlanetData]
 }
 
