@@ -1,8 +1,8 @@
 import UIKit
 
-class PersonCollectionViewCell: ExpandableCell {
+class PlanetCollectionViewCell: ExpandableCell {
 
-    var viewModel: PersonCellViewModeling?
+    private var viewModel: PlanetCellViewModeling?
 
     var scrollViewBottomConstraintToBottom: NSLayoutConstraint?
     var scrollViewBottomConstraintToTop: NSLayoutConstraint?
@@ -18,7 +18,6 @@ class PersonCollectionViewCell: ExpandableCell {
     lazy var nameLabel: UILabel = {
         let label = UILabel.makeGillSansLabel(fontSize: 40, alignment: .center)
         label.textColor = .white
-//        label.text = viewm
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -40,84 +39,55 @@ class PersonCollectionViewCell: ExpandableCell {
     }()
 
     lazy var infoLabel: UILabel = {
-        let label = UILabel.makeGillSansLabel(fontSize: 28, alignment: .center)
+        let label = UILabel.makeGillSansLabel(fontSize: 24, alignment: .center)
         label.text = "Info"
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
 
-    lazy var heightLabel: UILabel = {
+    lazy var rotationPeriodLabel: UILabel = {
         let label = UILabel.makeGillSansLabel(fontSize: 24, alignment: .left)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
 
-    lazy var weightLabel: UILabel = {
+    lazy var orbitalPeriodLabel: UILabel = {
         let label = UILabel.makeGillSansLabel(fontSize: 24, alignment: .left)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
 
-    lazy var hairColorLabel: UILabel = {
+    lazy var diameterLabel: UILabel = {
         let label = UILabel.makeGillSansLabel(fontSize: 24, alignment: .left)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
 
-    lazy var firstHairColorView: UIView = {
-        let view = UIView()
-        view.layer.cornerRadius = 20
-        view.layer.masksToBounds = true
-        view.translatesAutoresizingMaskIntoConstraints = false
-        return view
-    }()
-
-    lazy var secondHairColorView: UIView = {
-        let view = UIView()
-        view.layer.cornerRadius = 20
-        view.layer.masksToBounds = true
-        view.translatesAutoresizingMaskIntoConstraints = false
-        return view
-    }()
-
-    lazy var skinColorLabel: UILabel = {
+    lazy var climateLabel: UILabel = {
         let label = UILabel.makeGillSansLabel(fontSize: 24, alignment: .left)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
 
-    lazy var eyeColorLabel: UILabel = {
-        let label = UILabel.makeGillSansLabel(fontSize: 24, alignment: .left)
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "zsdcvghnk"
-        return label
-    }()
-
-    lazy var firstEyeColorView: UIView = {
-        let view = UIView()
-        view.layer.cornerRadius = 20
-        view.layer.masksToBounds = true
-        view.backgroundColor = .black
-        view.translatesAutoresizingMaskIntoConstraints = false
-        return view
-    }()
-
-    lazy var secondEyeColorView: UIView = {
-        let view = UIView()
-        view.layer.cornerRadius = 20
-        view.layer.masksToBounds = true
-        view.backgroundColor = .black
-        view.translatesAutoresizingMaskIntoConstraints = false
-        return view
-    }()
-
-    lazy var birthYearLabel: UILabel = {
+    lazy var gravityLabel: UILabel = {
         let label = UILabel.makeGillSansLabel(fontSize: 24, alignment: .left)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
 
-    lazy var genderLabel: UILabel = {
+    lazy var terrainLabel: UILabel = {
+        let label = UILabel.makeGillSansLabel(fontSize: 24, alignment: .left)
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+
+    lazy var surfaceWaterLabel: UILabel = {
+        let label = UILabel.makeGillSansLabel(fontSize: 24, alignment: .left)
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+
+    lazy var populationLabel: UILabel = {
         let label = UILabel.makeGillSansLabel(fontSize: 24, alignment: .left)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -169,10 +139,6 @@ class PersonCollectionViewCell: ExpandableCell {
         setupContainerView()
         setupInfoLabel()
         layoutVerticalViews()
-        setupFirstHairColorView()
-        setupSecondHairColorView()
-        setupFirstEyeColorView()
-        setupSecondEyeColorView()
     }
 
     // All Constraints Go Here.
@@ -232,13 +198,14 @@ class PersonCollectionViewCell: ExpandableCell {
 
     private func layoutVerticalViews() {
         let verticalViews = [
-            heightLabel,
-            weightLabel,
-            hairColorLabel,
-            skinColorLabel,
-            eyeColorLabel,
-            birthYearLabel,
-            genderLabel,
+            rotationPeriodLabel,
+            orbitalPeriodLabel,
+            diameterLabel,
+            climateLabel,
+            gravityLabel,
+            terrainLabel,
+            surfaceWaterLabel,
+            populationLabel,
             dataCreatedDateLabel
         ]
         var prevBottom = infoLabel.bottomAnchor
@@ -255,60 +222,17 @@ class PersonCollectionViewCell: ExpandableCell {
         verticalViews.last?.bottomAnchor.constraint(equalTo: scrollViewContainer.bottomAnchor, constant: -20).isActive = true
     }
 
-    private func setupFirstHairColorView() {
-        scrollViewContainer.addSubview(firstHairColorView)
-        NSLayoutConstraint.activate([
-            firstHairColorView.leadingAnchor.constraint(equalTo: hairColorLabel.trailingAnchor, constant: 10),
-            firstHairColorView.centerYAnchor.constraint(equalTo: hairColorLabel.centerYAnchor),
-            firstHairColorView.heightAnchor.constraint(equalToConstant: 40),
-            firstHairColorView.widthAnchor.constraint(equalToConstant: 40)
-            ])
-    }
-
-    private func setupSecondHairColorView() {
-        scrollViewContainer.addSubview(secondHairColorView)
-        NSLayoutConstraint.activate([
-            secondHairColorView.leadingAnchor.constraint(equalTo: firstHairColorView.trailingAnchor, constant: 10),
-            secondHairColorView.centerYAnchor.constraint(equalTo: hairColorLabel.centerYAnchor),
-            secondHairColorView.heightAnchor.constraint(equalToConstant: 40),
-            secondHairColorView.widthAnchor.constraint(equalToConstant: 40)
-            ])
-    }
-
-    private func setupFirstEyeColorView() {
-        scrollViewContainer.addSubview(firstEyeColorView)
-        NSLayoutConstraint.activate([
-            firstEyeColorView.leadingAnchor.constraint(equalTo: eyeColorLabel.trailingAnchor, constant: 20),
-            firstEyeColorView.centerYAnchor.constraint(equalTo: eyeColorLabel.centerYAnchor),
-            firstEyeColorView.heightAnchor.constraint(equalToConstant: 40),
-            firstEyeColorView.widthAnchor.constraint(equalToConstant: 40)
-            ])
-    }
-
-    private func setupSecondEyeColorView() {
-        scrollViewContainer.addSubview(secondEyeColorView)
-        NSLayoutConstraint.activate([
-            secondEyeColorView.leadingAnchor.constraint(equalTo: firstEyeColorView.trailingAnchor, constant: 20),
-            secondEyeColorView.centerYAnchor.constraint(equalTo: eyeColorLabel.centerYAnchor),
-            secondEyeColorView.heightAnchor.constraint(equalToConstant: 40),
-            secondEyeColorView.widthAnchor.constraint(equalToConstant: 40)
-            ])
-    }
-
-    func updateWith(person: PersonData) {
-        viewModel = PersonCellViewModel(person: person)
+    func updateWith(planet: PlanetData) {
+        viewModel = PlanetCellViewModel(planet: planet)
         nameLabel.text = viewModel?.name
-        heightLabel.text = viewModel?.height
-        weightLabel.text = viewModel?.weight
-        hairColorLabel.text = viewModel?.hairColor
-        firstHairColorView.backgroundColor = viewModel?.hairColorUIColorOne
-        secondHairColorView.backgroundColor = viewModel?.hairColorUIColorTwo
-        skinColorLabel.text = viewModel?.skinColor
-        eyeColorLabel.text = viewModel?.eyeColor
-        firstEyeColorView.backgroundColor = viewModel?.eyeColorUIColorOne
-        secondEyeColorView.backgroundColor = viewModel?.eyeColorUIColorTwo
-        birthYearLabel.text = viewModel?.birthYear
-        genderLabel.text = viewModel?.gender
+        rotationPeriodLabel.text = viewModel?.rotationPeriod
+        orbitalPeriodLabel.text = viewModel?.orbitalPeriod
+        diameterLabel.text = viewModel?.diameter
+        climateLabel.text = viewModel?.climate
+        gravityLabel.text = viewModel?.gravity
+        terrainLabel.text = viewModel?.terrain
+        surfaceWaterLabel.text = viewModel?.surfaceWater
+        populationLabel.text = viewModel?.population
         dataCreatedDateLabel.text = viewModel?.dataCreatedDate
     }
 }
