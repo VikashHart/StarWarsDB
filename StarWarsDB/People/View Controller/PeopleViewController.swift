@@ -8,11 +8,16 @@ class PeopleViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureView()
-        configurePeopleViewConstraints()
         peopleView.collectionView.delegate = self
         peopleView.collectionView.dataSource = self
         bindViewModel()
         viewModel.loadInitialData()
+    }
+
+    @objc func screenEdgeSwipedRight(_ recognizer: UIScreenEdgePanGestureRecognizer) {
+        if recognizer.state == .recognized {
+            tabBarController?.selectedIndex = 1
+        }
     }
 
     private func bindViewModel() {
@@ -23,6 +28,14 @@ class PeopleViewController: UIViewController {
 
     private func configureView() {
         self.view.backgroundColor = .white
+        configurePeopleViewConstraints()
+        configureGestures()
+    }
+
+    private func configureGestures() {
+        let edgePanRight = UIScreenEdgePanGestureRecognizer(target: self, action: #selector(screenEdgeSwipedRight))
+        edgePanRight.edges = .right
+        view.addGestureRecognizer(edgePanRight)
     }
 
     private func configurePeopleViewConstraints() {
