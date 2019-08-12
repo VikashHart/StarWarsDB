@@ -4,8 +4,8 @@ class PeopleView: UIView {
 
    lazy var headerGradient: GradientView = {
         let view = GradientView()
-        view.gradientLayer?.startPoint = CGPoint(x: 0, y: 0.5)
-        view.gradientLayer?.endPoint = CGPoint(x: 1, y: 0.5)
+        view.gradientLayer?.startPoint = CGPoint(x: 0, y: 0)
+        view.gradientLayer?.endPoint = CGPoint(x: 1, y: 1)
         view.gradientLayer?.colors = CGColor.blacks
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
@@ -13,10 +13,10 @@ class PeopleView: UIView {
 
     lazy var headerTitle: UILabel = {
         let label = UILabel()
-        label.text = "People"
-        label.font = UIFont.systemFont(ofSize: 40, weight: .medium)
+        label.text = "Characters"
+        label.font = UIFont(fontName: .gillSansBoldItalic, size: 40)
         label.textAlignment = .center
-        label.textColor = UIColor.starWars
+        label.textColor = .white
         label.backgroundColor = .clear
         label.numberOfLines = 1
         label.adjustsFontSizeToFitWidth = true
@@ -28,7 +28,7 @@ class PeopleView: UIView {
 
     lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
-        layout.scrollDirection = .horizontal
+        layout.scrollDirection = .vertical
         let collectionView = UICollectionView(frame: frame, collectionViewLayout: layout)
         collectionView.backgroundColor = UIColor.white
         collectionView.register(PersonCollectionViewCell.self, forCellWithReuseIdentifier: cell)
@@ -63,7 +63,7 @@ class PeopleView: UIView {
             headerGradient.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
             headerGradient.leadingAnchor.constraint(equalTo: leadingAnchor),
             headerGradient.trailingAnchor.constraint(equalTo: trailingAnchor),
-            headerGradient.heightAnchor.constraint(equalToConstant: 44)
+            headerGradient.heightAnchor.constraint(equalToConstant: 50)
             ])
     }
 

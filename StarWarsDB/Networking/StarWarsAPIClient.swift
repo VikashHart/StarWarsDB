@@ -1,9 +1,5 @@
 import Foundation
 
-protocol PeopleRetrieving {
-
-}
-
 class StarWarsAPIClient {
     private let client: DataRetrieving
     private var nextPeopleURLString: String?

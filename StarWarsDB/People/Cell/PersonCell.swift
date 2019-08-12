@@ -5,19 +5,17 @@ class PersonCollectionViewCell: ExpandableCell {
     var scrollViewBottomConstraintToBottom: NSLayoutConstraint?
     var scrollViewBottomConstraintToTop: NSLayoutConstraint?
 
-
     lazy var gradientView: GradientView = {
         let view = GradientView()
         view.gradientLayer?.startPoint = CGPoint(x: 0, y: 0)
         view.gradientLayer?.endPoint = CGPoint(x: 1, y: 1)
-        view.gradientLayer?.colors = CGColor.oranges
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
 
     lazy var nameLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont.systemFont(ofSize: 40, weight: .bold)
+        label.font = UIFont(fontName: .gillSansBoldItalic, size: 40)
         label.textAlignment = .center
         label.textColor = .white
         label.backgroundColor = .clear
@@ -46,7 +44,7 @@ class PersonCollectionViewCell: ExpandableCell {
         let label = UILabel()
         label.textAlignment = .center
         label.textColor = .black
-        label.font = UIFont.systemFont(ofSize: 30, weight: .medium)
+        label.font = UIFont(fontName: .gillSansBoldItalic, size: 24)
         label.backgroundColor = .clear
         label.numberOfLines = 0
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -57,7 +55,7 @@ class PersonCollectionViewCell: ExpandableCell {
         let label = UILabel()
         label.textAlignment = .left
         label.textColor = .black
-        label.font = UIFont.systemFont(ofSize: 20, weight: .medium)
+        label.font = UIFont(fontName: .gillSansBoldItalic, size: 24)
         label.backgroundColor = .clear
         label.numberOfLines = 0
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -68,7 +66,7 @@ class PersonCollectionViewCell: ExpandableCell {
         let label = UILabel()
         label.textAlignment = .left
         label.textColor = .black
-        label.font = UIFont.systemFont(ofSize: 20, weight: .medium)
+        label.font = UIFont(fontName: .gillSansBoldItalic, size: 24)
         label.backgroundColor = .clear
         label.numberOfLines = 0
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -79,7 +77,7 @@ class PersonCollectionViewCell: ExpandableCell {
         let label = UILabel()
         label.textAlignment = .left
         label.textColor = .black
-        label.font = UIFont.systemFont(ofSize: 20, weight: .medium)
+        label.font = UIFont(fontName: .gillSansBoldItalic, size: 24)
         label.backgroundColor = .clear
         label.numberOfLines = 0
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -90,7 +88,6 @@ class PersonCollectionViewCell: ExpandableCell {
         let view = GradientView()
         view.gradientLayer?.startPoint = CGPoint(x: 0, y: 0.5)
         view.gradientLayer?.endPoint = CGPoint(x: 1, y: 0.5)
-        view.gradientLayer?.colors = CGColor.blacks
         view.layer.cornerRadius = 20
         view.layer.masksToBounds = true
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -101,7 +98,7 @@ class PersonCollectionViewCell: ExpandableCell {
         let label = UILabel()
         label.textAlignment = .left
         label.textColor = .black
-        label.font = UIFont.systemFont(ofSize: 20, weight: .medium)
+        label.font = UIFont(fontName: .gillSansBoldItalic, size: 24)
         label.backgroundColor = .clear
         label.numberOfLines = 0
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -112,7 +109,7 @@ class PersonCollectionViewCell: ExpandableCell {
         let label = UILabel()
         label.textAlignment = .left
         label.textColor = .black
-        label.font = UIFont.systemFont(ofSize: 20, weight: .medium)
+        label.font = UIFont(fontName: .gillSansBoldItalic, size: 24)
         label.backgroundColor = .clear
         label.numberOfLines = 0
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -123,7 +120,6 @@ class PersonCollectionViewCell: ExpandableCell {
         let view = GradientView()
         view.gradientLayer?.startPoint = CGPoint(x: 0, y: 0.5)
         view.gradientLayer?.endPoint = CGPoint(x: 1, y: 0.5)
-        view.gradientLayer?.colors = CGColor.blues
         view.layer.cornerRadius = 20
         view.layer.masksToBounds = true
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -134,7 +130,7 @@ class PersonCollectionViewCell: ExpandableCell {
         let label = UILabel()
         label.textAlignment = .left
         label.textColor = .black
-        label.font = UIFont.systemFont(ofSize: 20, weight: .medium)
+        label.font = UIFont(fontName: .gillSansBoldItalic, size: 24)
         label.backgroundColor = .clear
         label.numberOfLines = 0
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -145,7 +141,7 @@ class PersonCollectionViewCell: ExpandableCell {
         let label = UILabel()
         label.textAlignment = .left
         label.textColor = .black
-        label.font = UIFont.systemFont(ofSize: 20, weight: .medium)
+        label.font = UIFont(fontName: .gillSansBoldItalic, size: 24)
         label.backgroundColor = .clear
         label.numberOfLines = 0
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -156,7 +152,7 @@ class PersonCollectionViewCell: ExpandableCell {
         let label = UILabel()
         label.textAlignment = .left
         label.textColor = .black
-        label.font = UIFont.systemFont(ofSize: 20, weight: .medium)
+        label.font = UIFont(fontName: .gillSansBoldItalic, size: 24)
         label.backgroundColor = .clear
         label.numberOfLines = 0
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -228,7 +224,8 @@ class PersonCollectionViewCell: ExpandableCell {
     private func setupNameLabel() {
         gradientView.addSubview(nameLabel)
         NSLayoutConstraint.activate([
-            nameLabel.centerXAnchor.constraint(equalTo: gradientView.centerXAnchor),
+            nameLabel.leadingAnchor.constraint(equalTo: gradientView.leadingAnchor, constant: 20),
+            nameLabel.trailingAnchor.constraint(equalTo: gradientView.trailingAnchor, constant: -20),
             nameLabel.centerYAnchor.constraint(equalTo: gradientView.centerYAnchor)
             ])
     }
@@ -290,8 +287,7 @@ class PersonCollectionViewCell: ExpandableCell {
         scrollViewContainer.addSubview(hairColorLabel)
         NSLayoutConstraint.activate([
             hairColorLabel.topAnchor.constraint(equalTo: weightLabel.bottomAnchor, constant: 20),
-            hairColorLabel.leadingAnchor.constraint(equalTo: scrollViewContainer.leadingAnchor, constant: 20),
-            hairColorLabel.trailingAnchor.constraint(equalTo: scrollViewContainer.trailingAnchor, constant: -20)
+            hairColorLabel.leadingAnchor.constraint(equalTo: scrollViewContainer.leadingAnchor, constant: 20)
             ])
     }
 
@@ -299,7 +295,7 @@ class PersonCollectionViewCell: ExpandableCell {
         scrollViewContainer.addSubview(hairColorGradient)
         NSLayoutConstraint.activate([
             hairColorGradient.leadingAnchor.constraint(equalTo: hairColorLabel.trailingAnchor, constant: 30),
-            hairColorGradient.centerXAnchor.constraint(equalTo: hairColorLabel.centerXAnchor),
+            hairColorGradient.centerYAnchor.constraint(equalTo: hairColorLabel.centerYAnchor),
             hairColorGradient.heightAnchor.constraint(equalToConstant: 40),
             hairColorGradient.widthAnchor.constraint(equalToConstant: 40)
             ])
@@ -318,8 +314,7 @@ class PersonCollectionViewCell: ExpandableCell {
         scrollViewContainer.addSubview(eyeColorLabel)
         NSLayoutConstraint.activate([
             eyeColorLabel.topAnchor.constraint(equalTo: skinColorLabel.bottomAnchor, constant: 20),
-            eyeColorLabel.leadingAnchor.constraint(equalTo: scrollViewContainer.leadingAnchor, constant: 20),
-            eyeColorLabel.trailingAnchor.constraint(equalTo: scrollViewContainer.trailingAnchor, constant: -20),
+            eyeColorLabel.leadingAnchor.constraint(equalTo: scrollViewContainer.leadingAnchor, constant: 20)
             ])
     }
 
@@ -327,7 +322,7 @@ class PersonCollectionViewCell: ExpandableCell {
         scrollViewContainer.addSubview(eyeColorGradient)
         NSLayoutConstraint.activate([
             eyeColorGradient.leadingAnchor.constraint(equalTo: eyeColorLabel.trailingAnchor, constant: 30),
-            eyeColorGradient.centerXAnchor.constraint(equalTo: eyeColorLabel.centerXAnchor),
+            eyeColorGradient.centerYAnchor.constraint(equalTo: eyeColorLabel.centerYAnchor),
             eyeColorGradient.heightAnchor.constraint(equalToConstant: 40),
             eyeColorGradient.widthAnchor.constraint(equalToConstant: 40)
             ])

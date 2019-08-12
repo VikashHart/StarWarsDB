@@ -10,6 +10,8 @@
 		815EF85C22FFEF04001ADBCE /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815EF85B22FFEF04001ADBCE /* GradientView.swift */; };
 		815EF85E22FFEFA2001ADBCE /* UIColorConverter+cgColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815EF85D22FFEFA2001ADBCE /* UIColorConverter+cgColor.swift */; };
 		815EF8602300727D001ADBCE /* PeopleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815EF85F2300727D001ADBCE /* PeopleView.swift */; };
+		815EF86223007C07001ADBCE /* PeopleVCViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815EF86123007C07001ADBCE /* PeopleVCViewModel.swift */; };
+		815EF8652300A37C001ADBCE /* FontStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815EF8642300A37C001ADBCE /* FontStyle.swift */; };
 		81BAE53F22FF128500B16C50 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BAE53E22FF128500B16C50 /* AppDelegate.swift */; };
 		81BAE54122FF128500B16C50 /* PeopleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BAE54022FF128500B16C50 /* PeopleViewController.swift */; };
 		81BAE54422FF128500B16C50 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81BAE54222FF128500B16C50 /* Main.storyboard */; };
@@ -30,6 +32,8 @@
 		815EF85B22FFEF04001ADBCE /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		815EF85D22FFEFA2001ADBCE /* UIColorConverter+cgColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColorConverter+cgColor.swift"; sourceTree = "<group>"; };
 		815EF85F2300727D001ADBCE /* PeopleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleView.swift; sourceTree = "<group>"; };
+		815EF86123007C07001ADBCE /* PeopleVCViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleVCViewModel.swift; sourceTree = "<group>"; };
+		815EF8642300A37C001ADBCE /* FontStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontStyle.swift; sourceTree = "<group>"; };
 		81BAE53B22FF128500B16C50 /* StarWarsDB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StarWarsDB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81BAE53E22FF128500B16C50 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		81BAE54022FF128500B16C50 /* PeopleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleViewController.swift; sourceTree = "<group>"; };
@@ -66,6 +70,14 @@
 				815EF85D22FFEFA2001ADBCE /* UIColorConverter+cgColor.swift */,
 			);
 			path = Gradient;
+			sourceTree = "<group>";
+		};
+		815EF8632300A35E001ADBCE /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				815EF8642300A37C001ADBCE /* FontStyle.swift */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		81BAE53222FF128500B16C50 = {
@@ -124,6 +136,7 @@
 		81E2790122FFBED400E71FB5 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				815EF8632300A35E001ADBCE /* Fonts */,
 				815EF85A22FFEEDA001ADBCE /* Gradient */,
 				81E2790222FFBFF400E71FB5 /* Expandable Cell */,
 			);
@@ -168,6 +181,7 @@
 		81E2790822FFEBCF00E71FB5 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				815EF86123007C07001ADBCE /* PeopleVCViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -254,8 +268,10 @@
 			files = (
 				81E278FC22FF5B8200E71FB5 /* HTTPURLResponseAPIError.swift in Sources */,
 				81E278F822FF5AFB00E71FB5 /* StarWarsAPIClient.swift in Sources */,
+				815EF8652300A37C001ADBCE /* FontStyle.swift in Sources */,
 				815EF85C22FFEF04001ADBCE /* GradientView.swift in Sources */,
 				81BAE56622FF1CD600B16C50 /* StarWarsPlanetModel.swift in Sources */,
+				815EF86223007C07001ADBCE /* PeopleVCViewModel.swift in Sources */,
 				81BAE54122FF128500B16C50 /* PeopleViewController.swift in Sources */,
 				81E278FA22FF5B4C00E71FB5 /* NetworkError.swift in Sources */,
 				815EF85E22FFEFA2001ADBCE /* UIColorConverter+cgColor.swift in Sources */,
