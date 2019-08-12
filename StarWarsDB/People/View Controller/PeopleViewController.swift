@@ -14,6 +14,11 @@ class PeopleViewController: UIViewController {
         viewModel.loadInitialData()
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(true, animated: animated)
+        super.viewWillAppear(animated)
+    }
+
     @objc func screenEdgeSwipedRight(_ recognizer: UIScreenEdgePanGestureRecognizer) {
         if recognizer.state == .recognized {
             tabBarController?.selectedIndex = 1
@@ -134,7 +139,7 @@ extension PeopleViewController: UICollectionViewDataSource {
             break
         }
         let currentPerson = viewModel.peopleData[indexPath.row]
-            cell.nameLabel.text = currentPerson.name
+            cell.updateWith(person: currentPerson)
         return cell
     }
 }

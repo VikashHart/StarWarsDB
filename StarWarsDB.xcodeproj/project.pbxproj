@@ -13,6 +13,15 @@
 		815EF86223007C07001ADBCE /* PeopleVCViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815EF86123007C07001ADBCE /* PeopleVCViewModel.swift */; };
 		815EF8652300A37C001ADBCE /* FontStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815EF8642300A37C001ADBCE /* FontStyle.swift */; };
 		815EF86E2300F86E001ADBCE /* PlanetsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815EF86D2300F86E001ADBCE /* PlanetsViewController.swift */; };
+		815EF8732300FDF0001ADBCE /* PlanetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815EF8722300FDF0001ADBCE /* PlanetCell.swift */; };
+		815EF87623010411001ADBCE /* UILabel+GillSans.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815EF87523010411001ADBCE /* UILabel+GillSans.swift */; };
+		815EF87823011410001ADBCE /* PlanetsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815EF87723011410001ADBCE /* PlanetsView.swift */; };
+		815EF87A23012457001ADBCE /* PlanetsVCViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815EF87923012457001ADBCE /* PlanetsVCViewModel.swift */; };
+		815EF87F2301D52F001ADBCE /* PersonCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815EF87E2301D52F001ADBCE /* PersonCellViewModel.swift */; };
+		815EF8812301E5C3001ADBCE /* UIColor+StringDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815EF8802301E5C3001ADBCE /* UIColor+StringDecoder.swift */; };
+		815EF88323020270001ADBCE /* Double+rounding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815EF88223020270001ADBCE /* Double+rounding.swift */; };
+		815EF885230218B7001ADBCE /* PlanetCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815EF884230218B7001ADBCE /* PlanetCellViewModel.swift */; };
+		815EF88723021CE1001ADBCE /* Date+formatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815EF88623021CE1001ADBCE /* Date+formatting.swift */; };
 		81BAE53F22FF128500B16C50 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BAE53E22FF128500B16C50 /* AppDelegate.swift */; };
 		81BAE54122FF128500B16C50 /* PeopleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BAE54022FF128500B16C50 /* PeopleViewController.swift */; };
 		81BAE54422FF128500B16C50 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81BAE54222FF128500B16C50 /* Main.storyboard */; };
@@ -36,6 +45,15 @@
 		815EF86123007C07001ADBCE /* PeopleVCViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleVCViewModel.swift; sourceTree = "<group>"; };
 		815EF8642300A37C001ADBCE /* FontStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontStyle.swift; sourceTree = "<group>"; };
 		815EF86D2300F86E001ADBCE /* PlanetsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetsViewController.swift; sourceTree = "<group>"; };
+		815EF8722300FDF0001ADBCE /* PlanetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetCell.swift; sourceTree = "<group>"; };
+		815EF87523010411001ADBCE /* UILabel+GillSans.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+GillSans.swift"; sourceTree = "<group>"; };
+		815EF87723011410001ADBCE /* PlanetsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetsView.swift; sourceTree = "<group>"; };
+		815EF87923012457001ADBCE /* PlanetsVCViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetsVCViewModel.swift; sourceTree = "<group>"; };
+		815EF87E2301D52F001ADBCE /* PersonCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonCellViewModel.swift; sourceTree = "<group>"; };
+		815EF8802301E5C3001ADBCE /* UIColor+StringDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+StringDecoder.swift"; sourceTree = "<group>"; };
+		815EF88223020270001ADBCE /* Double+rounding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+rounding.swift"; sourceTree = "<group>"; };
+		815EF884230218B7001ADBCE /* PlanetCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetCellViewModel.swift; sourceTree = "<group>"; };
+		815EF88623021CE1001ADBCE /* Date+formatting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+formatting.swift"; sourceTree = "<group>"; };
 		81BAE53B22FF128500B16C50 /* StarWarsDB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StarWarsDB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81BAE53E22FF128500B16C50 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		81BAE54022FF128500B16C50 /* PeopleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleViewController.swift; sourceTree = "<group>"; };
@@ -69,7 +87,6 @@
 			isa = PBXGroup;
 			children = (
 				815EF85B22FFEF04001ADBCE /* GradientView.swift */,
-				815EF85D22FFEFA2001ADBCE /* UIColorConverter+cgColor.swift */,
 			);
 			path = Gradient;
 			sourceTree = "<group>";
@@ -85,7 +102,10 @@
 		815EF86B2300F83C001ADBCE /* Planets */ = {
 			isa = PBXGroup;
 			children = (
+				815EF86F2300FD40001ADBCE /* View Model */,
 				815EF86C2300F850001ADBCE /* View Controller */,
+				815EF8702300FD4F001ADBCE /* View */,
+				815EF8712300FD73001ADBCE /* Cell */,
 			);
 			path = Planets;
 			sourceTree = "<group>";
@@ -96,6 +116,43 @@
 				815EF86D2300F86E001ADBCE /* PlanetsViewController.swift */,
 			);
 			path = "View Controller";
+			sourceTree = "<group>";
+		};
+		815EF86F2300FD40001ADBCE /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				815EF87923012457001ADBCE /* PlanetsVCViewModel.swift */,
+				815EF884230218B7001ADBCE /* PlanetCellViewModel.swift */,
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
+		815EF8702300FD4F001ADBCE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				815EF87723011410001ADBCE /* PlanetsView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		815EF8712300FD73001ADBCE /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				815EF8722300FDF0001ADBCE /* PlanetCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		815EF87423010394001ADBCE /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				815EF87523010411001ADBCE /* UILabel+GillSans.swift */,
+				815EF85D22FFEFA2001ADBCE /* UIColorConverter+cgColor.swift */,
+				815EF8802301E5C3001ADBCE /* UIColor+StringDecoder.swift */,
+				815EF88223020270001ADBCE /* Double+rounding.swift */,
+				815EF88623021CE1001ADBCE /* Date+formatting.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		81BAE53222FF128500B16C50 = {
@@ -155,6 +212,7 @@
 		81E2790122FFBED400E71FB5 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				815EF87423010394001ADBCE /* Extensions */,
 				815EF8632300A35E001ADBCE /* Fonts */,
 				815EF85A22FFEEDA001ADBCE /* Gradient */,
 				81E2790222FFBFF400E71FB5 /* Expandable Cell */,
@@ -201,6 +259,7 @@
 			isa = PBXGroup;
 			children = (
 				815EF86123007C07001ADBCE /* PeopleVCViewModel.swift */,
+				815EF87E2301D52F001ADBCE /* PersonCellViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -286,7 +345,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				81E278FC22FF5B8200E71FB5 /* HTTPURLResponseAPIError.swift in Sources */,
+				815EF87623010411001ADBCE /* UILabel+GillSans.swift in Sources */,
 				81E278F822FF5AFB00E71FB5 /* StarWarsAPIClient.swift in Sources */,
+				815EF8812301E5C3001ADBCE /* UIColor+StringDecoder.swift in Sources */,
 				815EF8652300A37C001ADBCE /* FontStyle.swift in Sources */,
 				815EF85C22FFEF04001ADBCE /* GradientView.swift in Sources */,
 				81BAE56622FF1CD600B16C50 /* StarWarsPlanetModel.swift in Sources */,
@@ -294,13 +355,20 @@
 				81BAE54122FF128500B16C50 /* PeopleViewController.swift in Sources */,
 				81E278FA22FF5B4C00E71FB5 /* NetworkError.swift in Sources */,
 				815EF85E22FFEFA2001ADBCE /* UIColorConverter+cgColor.swift in Sources */,
+				815EF88723021CE1001ADBCE /* Date+formatting.swift in Sources */,
+				815EF885230218B7001ADBCE /* PlanetCellViewModel.swift in Sources */,
 				81E2790022FF9ECF00E71FB5 /* StarWarsEndpointBuilder.swift in Sources */,
 				81BAE56422FF195B00B16C50 /* StarWarsPeopleModel.swift in Sources */,
 				815EF8602300727D001ADBCE /* PeopleView.swift in Sources */,
 				815EF86E2300F86E001ADBCE /* PlanetsViewController.swift in Sources */,
+				815EF87A23012457001ADBCE /* PlanetsVCViewModel.swift in Sources */,
 				81E2790B22FFECB100E71FB5 /* PersonCell.swift in Sources */,
 				81BAE53F22FF128500B16C50 /* AppDelegate.swift in Sources */,
+				815EF8732300FDF0001ADBCE /* PlanetCell.swift in Sources */,
 				81E278FE22FF9E1A00E71FB5 /* NetworkClient.swift in Sources */,
+				815EF88323020270001ADBCE /* Double+rounding.swift in Sources */,
+				815EF87823011410001ADBCE /* PlanetsView.swift in Sources */,
+				815EF87F2301D52F001ADBCE /* PersonCellViewModel.swift in Sources */,
 				81E2790422FFC21600E71FB5 /* ExpandableCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

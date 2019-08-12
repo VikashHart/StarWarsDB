@@ -1,36 +1,36 @@
 import UIKit
 
-protocol PeopleVCViewModeling {
+protocol PlanetVCViewModeling {
     var cellSpacing: CGFloat { get }
     var numberOfCells: CGFloat { get }
     var numberOfSpaces: CGFloat { get }
-    var peopleData: [PersonData] { get }
-    var hiddenCells: [PersonCollectionViewCell] { get set }
-    var expandedCell: PersonCollectionViewCell? { get set }
+    var planetData: [PlanetData] { get }
+    var hiddenCells: [PlanetCollectionViewCell] { get set }
+    var expandedCell: PlanetCollectionViewCell? { get set }
     var onDataRecieved: (() -> Void)? { get set }
 
     func loadInitialData()
     func fetchNewData()
 }
 
-class PeopleVCViewModel: PeopleVCViewModeling {
+class PlanetVCViewModel: PlanetVCViewModeling {
     let cellSpacing: CGFloat
     var numberOfCells: CGFloat
     let numberOfSpaces: CGFloat
-    private(set) var peopleData: [PersonData] = [] {
+    private(set) var planetData: [PlanetData] = [] {
         didSet {
             DispatchQueue.main.async {
                 self.onDataRecieved?()
             }
         }
     }
-    private let apiClient: PeopleRetrievable
+    private let apiClient: PlanetsRetrievable
 
-    var hiddenCells: [PersonCollectionViewCell] = []
-    var expandedCell: PersonCollectionViewCell?
+    var hiddenCells: [PlanetCollectionViewCell] = []
+    var expandedCell: PlanetCollectionViewCell?
     var onDataRecieved: (() -> Void)?
 
-    init(cellSpacing: CGFloat = 10, numberOfCells: CGFloat = 1, apiClient: PeopleRetrievable = StarWarsAPIClient()) {
+    init(cellSpacing: CGFloat = 10, numberOfCells: CGFloat = 1, apiClient: PlanetsRetrievable = StarWarsAPIClient()) {
         self.cellSpacing = cellSpacing
         self.numberOfCells = numberOfCells
         self.numberOfSpaces = numberOfCells + 1
@@ -38,10 +38,10 @@ class PeopleVCViewModel: PeopleVCViewModeling {
     }
 
     func loadInitialData() {
-        apiClient.getPeople(completion: { [weak self] (result) in
+        apiClient.getPlanets(completion: { [weak self] (result) in
             switch result {
             case .success(let data):
-                self?.peopleData = data
+                self?.planetData = data
             case .failure(let error):
                 print(error)
             }
@@ -49,11 +49,11 @@ class PeopleVCViewModel: PeopleVCViewModeling {
     }
 
     func fetchNewData() {
-        apiClient.getNextPeople { [weak self] (result) in
+        apiClient.getNextPlanets { [weak self] (result) in
             switch result {
             case .success(let data):
-                if let existingData = self?.peopleData {
-                self?.peopleData = existingData + data
+                if let existingData = self?.planetData {
+                    self?.planetData = existingData + data
                 }
             case .failure(let error):
                 print(error)

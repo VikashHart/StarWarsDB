@@ -1,8 +1,8 @@
 import UIKit
 
-class PeopleView: UIView {
+class PlanetsView: UIView {
 
-   lazy var headerGradient: GradientView = {
+    lazy var headerGradient: GradientView = {
         let view = GradientView()
         view.gradientLayer?.startPoint = CGPoint(x: 0, y: 0)
         view.gradientLayer?.endPoint = CGPoint(x: 1, y: 1)
@@ -13,7 +13,7 @@ class PeopleView: UIView {
 
     lazy var headerTitle: UILabel = {
         let label = UILabel.makeGillSansLabel(fontSize: 40, alignment: .center)
-        label.text = "Characters"
+        label.text = "Planets"
         label.textColor = .white
         label.numberOfLines = 1
         label.adjustsFontSizeToFitWidth = true
@@ -21,14 +21,14 @@ class PeopleView: UIView {
         return label
     }()
 
-    let cell = "PersonCell"
+    let cell = "PlanetCell"
 
     lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
         let collectionView = UICollectionView(frame: frame, collectionViewLayout: layout)
         collectionView.backgroundColor = UIColor.white
-        collectionView.register(PersonCollectionViewCell.self, forCellWithReuseIdentifier: cell)
+        collectionView.register(PlanetCollectionViewCell.self, forCellWithReuseIdentifier: cell)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         return collectionView
     }()

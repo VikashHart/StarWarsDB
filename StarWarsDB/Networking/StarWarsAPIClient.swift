@@ -1,6 +1,16 @@
 import Foundation
 
-class StarWarsAPIClient {
+protocol PeopleRetrievable {
+    func getPeople(completion: @escaping (Result<[PersonData], NetworkError>) -> Void)
+    func getNextPeople(completion: @escaping (Result<[PersonData], NetworkError>) -> Void)
+}
+
+protocol PlanetsRetrievable {
+    func getPlanets(completion: @escaping (Result<[PlanetData], NetworkError>) -> Void)
+    func getNextPlanets(completion: @escaping (Result<[PlanetData], NetworkError>) -> Void)
+}
+
+class StarWarsAPIClient: PeopleRetrievable, PlanetsRetrievable {
     private let client: DataRetrieving
     private var nextPeopleURLString: String?
     private var nextPlanetsURLString: String?
