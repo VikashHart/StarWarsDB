@@ -10,10 +10,22 @@ class ExpandableCell: UICollectionViewCell, Expandable {
     private var initialFrame: CGRect?
     private var initialCornerRadius: CGFloat?
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
+    override init(frame: CGRect) {
+        super.init(frame: .zero)
+        commonInit()
+    }
 
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        commonInit()
+    }
+
+    private func commonInit() {
         configureAll()
+    }
+
+    override func layoutSubviews() {
+        super.layoutSubviews()
     }
 
     // MARK: - Configuration
@@ -24,14 +36,12 @@ class ExpandableCell: UICollectionViewCell, Expandable {
 
     private func configureCell() {
         self.contentView.backgroundColor = .white
-        self.contentView.layer.cornerRadius = 10
-        self.contentView.layer.masksToBounds = true
-
-        self.layer.masksToBounds = false
+        self.layer.cornerRadius = 10
+        self.layer.masksToBounds = true
         self.layer.shadowColor = UIColor.black.cgColor
         self.layer.shadowOpacity = 0.3
         self.layer.shadowOffset = CGSize(width: 0, height: 0)
-        self.layer.shadowRadius = self.contentView.layer.cornerRadius
+        self.layer.shadowRadius = self.layer.cornerRadius
     }
 
     // MARK: - Showing/Hiding Logic
@@ -67,16 +77,16 @@ class ExpandableCell: UICollectionViewCell, Expandable {
 
     func expand(in collectionView: UICollectionView) {
         initialFrame = self.frame
-        initialCornerRadius = self.contentView.layer.cornerRadius
+        initialCornerRadius = self.layer.cornerRadius
 
-        self.contentView.layer.cornerRadius = 0
+        self.layer.cornerRadius = 0
         self.frame = CGRect(x: 0, y: collectionView.contentOffset.y, width: collectionView.frame.width, height: collectionView.frame.height)
 
         layoutIfNeeded()
     }
 
     func collapse() {
-        self.contentView.layer.cornerRadius = initialCornerRadius ?? self.contentView.layer.cornerRadius
+        self.layer.cornerRadius = initialCornerRadius ?? self.layer.cornerRadius
         self.frame = initialFrame ?? self.frame
 
         initialFrame = nil
@@ -84,5 +94,4 @@ class ExpandableCell: UICollectionViewCell, Expandable {
 
         layoutIfNeeded()
     }
-
 }

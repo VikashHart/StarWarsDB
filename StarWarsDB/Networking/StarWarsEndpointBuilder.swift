@@ -6,7 +6,7 @@ struct StarWarsEndpointBuilder {
         case planets
     }
 
-    static private let apiBase = "https://swapi.co/api/"
+    static private let apiBase = "https://swapi.co/api"
 
     static func endpoint(_ type: StarWarsEndpoint) -> URL {
         let path: String
