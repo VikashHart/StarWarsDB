@@ -5,9 +5,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+
+        //People View Controller
+        let peopleViewController = PeopleViewController()
+        let peopleViewNavCon = UINavigationController(rootViewController: peopleViewController)
+        peopleViewController.tabBarItem = UITabBarItem(title: "People", image: UIImage(named: "people"), tag: 0)
+
+        //Planets View Controller
+        let planetsViewController = PlanetsViewController()
+        let planetsViewNavCon = UINavigationController(rootViewController: planetsViewController)
+        planetsViewController.tabBarItem = UITabBarItem(title: "Planets", image: UIImage(named: "planets"), tag: 1)
+
+        //Tab Bar Controller
+        let tabBarController = UITabBarController()
+        tabBarController.viewControllers = [peopleViewNavCon, planetsViewNavCon]
+
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.rootViewController = tabBarController
+        window?.makeKeyAndVisible()
         return true
     }
 
