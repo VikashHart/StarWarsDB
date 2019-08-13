@@ -6,3 +6,8 @@
 
 ## Testing
 - To run tests press `cmd + u`
+
+## Minimum Requirements
+- Xcode 10.2.1
+- iOS 12.1
+- Cocoapods 1.5.3
