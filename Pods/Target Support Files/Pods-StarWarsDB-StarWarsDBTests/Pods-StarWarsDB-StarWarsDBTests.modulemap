@@ -1,0 +1,6 @@
+framework module Pods_StarWarsDB_StarWarsDBTests {
+  umbrella header "Pods-StarWarsDB-StarWarsDBTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
