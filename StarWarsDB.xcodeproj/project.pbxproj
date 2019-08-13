@@ -25,6 +25,10 @@
 		815EF885230218B7001ADBCE /* PlanetCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815EF884230218B7001ADBCE /* PlanetCellViewModel.swift */; };
 		815EF88723021CE1001ADBCE /* Date+formatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815EF88623021CE1001ADBCE /* Date+formatting.swift */; };
 		815EF88F23022C72001ADBCE /* StarWarsDBTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815EF88E23022C72001ADBCE /* StarWarsDBTests.swift */; };
+		815EF89723024049001ADBCE /* PersonCellViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815EF89623024049001ADBCE /* PersonCellViewModelSpec.swift */; };
+		815EF899230259DF001ADBCE /* PlanetCellViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815EF898230259DF001ADBCE /* PlanetCellViewModelSpec.swift */; };
+		815EF89B23025DC1001ADBCE /* PersonVCViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815EF89A23025DC1001ADBCE /* PersonVCViewModelSpec.swift */; };
+		815EF89D23026192001ADBCE /* PlanetVCViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815EF89C23026192001ADBCE /* PlanetVCViewModelSpec.swift */; };
 		81BAE53F22FF128500B16C50 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BAE53E22FF128500B16C50 /* AppDelegate.swift */; };
 		81BAE54122FF128500B16C50 /* PeopleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BAE54022FF128500B16C50 /* PeopleViewController.swift */; };
 		81BAE54422FF128500B16C50 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81BAE54222FF128500B16C50 /* Main.storyboard */; };
@@ -72,6 +76,10 @@
 		815EF88C23022C72001ADBCE /* StarWarsDBTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StarWarsDBTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		815EF88E23022C72001ADBCE /* StarWarsDBTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarWarsDBTests.swift; sourceTree = "<group>"; };
 		815EF89023022C72001ADBCE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		815EF89623024049001ADBCE /* PersonCellViewModelSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonCellViewModelSpec.swift; sourceTree = "<group>"; };
+		815EF898230259DF001ADBCE /* PlanetCellViewModelSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetCellViewModelSpec.swift; sourceTree = "<group>"; };
+		815EF89A23025DC1001ADBCE /* PersonVCViewModelSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonVCViewModelSpec.swift; sourceTree = "<group>"; };
+		815EF89C23026192001ADBCE /* PlanetVCViewModelSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetVCViewModelSpec.swift; sourceTree = "<group>"; };
 		81BAE53B22FF128500B16C50 /* StarWarsDB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StarWarsDB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81BAE53E22FF128500B16C50 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		81BAE54022FF128500B16C50 /* PeopleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleViewController.swift; sourceTree = "<group>"; };
@@ -191,6 +199,10 @@
 			children = (
 				815EF88E23022C72001ADBCE /* StarWarsDBTests.swift */,
 				815EF89023022C72001ADBCE /* Info.plist */,
+				815EF89623024049001ADBCE /* PersonCellViewModelSpec.swift */,
+				815EF898230259DF001ADBCE /* PlanetCellViewModelSpec.swift */,
+				815EF89A23025DC1001ADBCE /* PersonVCViewModelSpec.swift */,
+				815EF89C23026192001ADBCE /* PlanetVCViewModelSpec.swift */,
 			);
 			path = StarWarsDBTests;
 			sourceTree = "<group>";
@@ -512,6 +524,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				815EF899230259DF001ADBCE /* PlanetCellViewModelSpec.swift in Sources */,
+				815EF89B23025DC1001ADBCE /* PersonVCViewModelSpec.swift in Sources */,
+				815EF89D23026192001ADBCE /* PlanetVCViewModelSpec.swift in Sources */,
+				815EF89723024049001ADBCE /* PersonCellViewModelSpec.swift in Sources */,
 				815EF88F23022C72001ADBCE /* StarWarsDBTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

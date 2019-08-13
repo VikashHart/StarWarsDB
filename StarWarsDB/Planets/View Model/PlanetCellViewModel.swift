@@ -45,7 +45,7 @@ class PlanetCellViewModel: PlanetCellViewModeling {
         self.population = "Population \(planet.population)"
 
         if let diameterAsDouble = Double(planet.diameter) {
-            diameter = "Diameter: \(((diameterAsDouble) / 659.793).rounded(to: 1)) miles"
+            diameter = "Diameter: \(((diameterAsDouble) / 1.609).rounded(to: 1)) miles"
         }
 
         self.dataCreatedDate = "Date Created: \(Date.formatDateString(dateString: planet.created))"
